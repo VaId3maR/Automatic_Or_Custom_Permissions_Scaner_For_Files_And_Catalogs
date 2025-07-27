@@ -1,0 +1,64 @@
+=======================================================================
+ Security Audit Report
+ Host:     kali
+ Date:     2025-07-26 20:36:30 UTC
+ Run by:   kali
+ Scanned directories:
+  - /home/kali/Desktop
+=======================================================================
+
+== CRITICAL: Files/Directories with 777 permissions ==
+Risk level: HIGH
+Why it's a problem: Anyone can read, write, and execute
+Results (0):
+  - none
+
+== World-writable files ==
+Risk level: HIGH
+Why it's a problem: Files that can be modified by any user
+Results (1):
+   oct  sym         user        group             size  date        time   path
+  777 -rwxrwxrwx kali kali 12032 2025-07-26 16:26 /home/kali/Desktop/AutomaticOrCustomFilePermissionsAudit.sh
+
+== World-writable directories ==
+Risk level: MEDIUM
+Why it's a problem: Anyone can create files in these directories
+Results (1):
+   oct  sym         user        group             size  date        time   path
+  777 drwxrwxrwx kali kali 4096 2025-07-26 11:02 /home/kali/Desktop/NewTestFolder_777
+
+== World-writable directories without sticky bit ==
+Risk level: HIGH
+Why it's a problem: Users can delete/replace files owned by others
+Results (1):
+   oct  sym         user        group             size  date        time   path
+  777 drwxrwxrwx kali kali 4096 2025-07-26 11:02 /home/kali/Desktop/NewTestFolder_777
+
+== Files with SUID ==
+Risk level: HIGH
+Why it's a problem: Programs run with owner permissions
+Results (0):
+  - none
+
+== Files/directories with SGID ==
+Risk level: HIGH/MEDIUM
+Why it's a problem: Operates with group permissions
+Results (0):
+  - none
+
+Summary:
+  Total issues found:                                3
+
+Recommendations:
+- Files:
+    - default 0644 (rw-r--r--) or 0600 for sensitive files
+    - executables 0755 (rwxr-xr-x) instead of 0777
+    - avoid o+w (others write)
+- Directories:
+    - default 0755
+    - shared directories: 1777 for public (e.g., /tmp), 2775 for group sharing
+    - if o+w is needed, set sticky bit (chmod 1777)
+- SUID/SGID:
+    - minimize SUID/SGID files
+    - keep packages updated
+    - review and test before removing bits
