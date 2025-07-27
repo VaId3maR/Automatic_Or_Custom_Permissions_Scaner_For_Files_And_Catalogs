@@ -1,2 +1,19 @@
 # Automatic_Or_Custom_Permissions_Scaner_For_Files_And_Catalogs
 Linux - Permissions scaner for files and catalogs
+
+```
+descriptions(){
+In Linux, proper use of chmod to manage file and directory permissions is critical for maintaining system security and integrity. Overly broad permissions (e.g., granting execute rights to "others" on sensitive scripts) can expose files to unauthorized access, modification, or deletion, creating security vulnerabilities. Excessive permissions may also compromise data confidentiality or system stability, as untrusted users could exploit lax settings to disrupt operations or gain unintended control.
+}
+
+important(){
+The report is saved on the /Desktop.
+For custom scan must insert correctly path(s) becouse script do not checked that path(s) exists.
+}
+
+details() {
+Example Screenshot for autoscan - show how use script for automatic scan.
+Example screenshot for custom scan - show how use script for custom scan.
+Example report - security_audit_report_file_permissions_2025-07-26-04-36-PM.
+}
+```
