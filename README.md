@@ -1,4 +1,4 @@
-# Automatic_Or_Custom_Permissions_Scaner_For_Files_And_Catalogs
+# Automatic or custom permissions scaner for files and catalogs
 Linux - Permissions scaner for files and catalogs
 
 
