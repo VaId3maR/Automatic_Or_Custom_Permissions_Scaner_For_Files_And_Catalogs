@@ -10,8 +10,8 @@ Linux - Permissions scaner for files and catalogs
 > 
 > + For custom scan must insert correctly path(s) becouse script do not checked that path(s) exists.
 >
-> + Example screenshot for autoscan - show how use script for automatic scan.
+> + ```Example screenshot for autoscan.png``` - show how use script for automatic scan.
 >
-> + Example screenshot for custom scan - show how use script for custom scan.
+> + ```Example screenshot for custom scan.png``` - show how use script for custom scan.
 >
-> + Example report - security_audit_report_file_permissions_2025-07-26-04-36-PM.
+> + ```Example report - security_audit_report_file_permissions_2025-07-26-04-36-PM.txt``` - show example report.
